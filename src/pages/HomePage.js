@@ -6,7 +6,7 @@ export default function EduWeb() {
     <>
       <div className="eduweb-navbar-wrapper">
         <nav className="eduweb-nav">
-          <Link to="/info">Info</Link>
+         
           <Link to="/login">Login</Link>
           <Link to="/signup">SignUp</Link>
           <Link to="/courses">Courses</Link>
@@ -68,7 +68,6 @@ export default function EduWeb() {
           <div className="footer-links">
             <h4>Quick Links</h4>
             <ul>
-              <li><Link to="/info">Info</Link></li>
               <li><Link to="/courses">Courses</Link></li>
               <li><Link to="/login">Login</Link></li>
               <li><Link to="/signup">SignUp</Link></li>

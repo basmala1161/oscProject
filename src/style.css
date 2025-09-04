@@ -503,3 +503,61 @@ input::placeholder {
   color: #fff;
   cursor: pointer;
 }
+/* ================= Create / Lesson Forms ================= */
+.create-form {
+  background-color: #2c2c2c;
+  padding: 40px 30px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #f06292;
+  margin-bottom: 25px;
+}
+
+.create-form input,
+.create-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 2px solid #444;
+  outline: none;
+  background-color: #1c1c1c;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.create-form input:focus,
+.create-form textarea:focus {
+  border-color: #f06292;
+}
+
+.create-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* زرار (+) */
+.plus-button {
+  margin: 25px auto 0;
+  background-color: #f06292;
+  color: #fff;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.plus-button:hover {
+  filter: brightness(1.1);
+}
