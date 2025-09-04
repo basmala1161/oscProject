@@ -26,11 +26,7 @@ export default function SignUp() {
       alert("Passwords do not match!");
       return;
     }
-
-    // 🔹 هنا المفروض هيكون API call للباك إند
     console.log("Registered:", { role, name, email, password });
-
-    // 🔹 redirect حسب الدور
     if (role === "Instructor") {
       navigate("/create-course");
     } else if (role === "Student") {

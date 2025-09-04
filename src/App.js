@@ -1,44 +1,25 @@
-// App.js
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-import { useState } from "react";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Courses from "./pages/Courses";
-import StudentDashboard from "./pages/StudentDashBoard";
-import ChatBot from "./components/ChatBot";
-import InstructorCreateTask from "./pages/InstructorCreateTask";
-import CreateCourse from "./pages/inatructorCreate";
-import CourseDetails from "./pages/CourseDetails";
-import InstructorCreate from "./pages/inatructorCreate";
-import InstructorCreateLesson from "./pages/InstructorAddLesson";
-
+import InstructorProfile from "./pages/InstructorProfile";
+import StudentProfile from "./pages/StudentProfile";
+import Footer from "./components/Footer";
+import Navbar from "./components/NavBar";
+import Chatbot from "./components/ChatBot";
 function App() {
-  const [user, setUser] = useState(null); 
-  // user = { role: "student" | "instructor" }
-
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        
-        <Route path="/login" element={<Login setUser={setUser} />} />
-        <Route path="/signup" element={<SignUp setUser={setUser} />} />
-
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/student-dashboard" element={<StudentDashboard />} />
-
-        <Route path="/create-course" element={<CreateCourse />} />
-        
-          <Route path="/course/:courseId/add-lesson" element={<InstructorCreateLesson />} />
-        <Route path="/lesson/:lessonId/create-task" element={<InstructorCreateTask />} />
-        
-        <Route path="/courses/:id" element={<CourseDetails />} />
-       
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/InstructorProfile" element={<InstructorProfile />} />
+        <Route path="/student-dashboard" element={<StudentProfile />} />
       </Routes>
-
-      <ChatBot />
+      <Footer />
+      <Chatbot/>
     </BrowserRouter>
   );
 }
